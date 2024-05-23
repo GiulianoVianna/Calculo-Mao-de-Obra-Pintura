@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="431.0" prefWidth="436.0" style="-fx-background-color: #140915; -fx-border-color: #A871EA;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.CalculoTintaViewController">
+   <children>
+      <Label layoutX="70.0" layoutY="24.0" text="Cálculo - Mão de Obra de Pintura" textFill="WHITE">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="27.0" layoutY="63.0" text="Largura" textFill="WHITE" />
+      <TextField fx:id="txtLargura" alignment="CENTER" layoutX="24.0" layoutY="87.0" prefHeight="26.0" prefWidth="90.0" style="-fx-background-color: #A871EA; -fx-text-fill: white;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="124.0" layoutY="63.0" text="Altura" textFill="WHITE" />
+      <TextField fx:id="txtAltura" alignment="CENTER" layoutX="124.0" layoutY="87.0" prefHeight="26.0" prefWidth="90.0" style="-fx-background-color: #A871EA; -fx-text-fill: white;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="223.0" layoutY="63.0" text="Preço m2" textFill="WHITE" />
+      <TextField fx:id="txtPrecoM2" alignment="CENTER" layoutX="223.0" layoutY="87.0" prefHeight="26.0" prefWidth="90.0" style="-fx-background-color: #A871EA; -fx-text-fill: white;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="324.0" layoutY="62.0" text="Total" textFill="WHITE" />
+      <TextField fx:id="txtPrecoTotal" alignment="CENTER" editable="false" layoutX="324.0" layoutY="86.0" prefHeight="26.0" prefWidth="90.0" style="-fx-background-color: #A871EA; -fx-text-fill: white;">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </TextField>
+      <Button fx:id="btSalvar" layoutX="47.0" layoutY="365.0" mnemonicParsing="false" onAction="#onBtSalvarAction" prefHeight="46.0" prefWidth="164.0" text="Calcular" textFill="#a871ea">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Button>
+      <Button fx:id="btLimpar" layoutX="227.0" layoutY="365.0" mnemonicParsing="false" onAction="#onBtLimparAction" prefHeight="46.0" prefWidth="164.0" text="Limpar" textFill="#a871ea">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Button>
+      <TableView fx:id="tableView" layoutX="24.0" layoutY="126.0" prefHeight="187.0" prefWidth="391.0">
+        <columns>
+          <TableColumn fx:id="larguraCol" prefWidth="90.0" text="Largura" />
+          <TableColumn fx:id="alturaCol" prefWidth="90.0" text="Altura" />
+            <TableColumn fx:id="precoM2Col" prefWidth="90.0" text="Preço M2" />
+            <TableColumn fx:id="totalCol" prefWidth="105.0" text="Total" />
+        </columns>
+      </TableView>
+      <Label layoutX="282.0" layoutY="328.0" text="Total:" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtValorTotal" alignment="CENTER" editable="false" layoutX="324.0" layoutY="322.0" prefHeight="26.0" prefWidth="90.0" style="-fx-background-color: #A871EA; -fx-text-fill: white;">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </TextField>
+   </children>
+</AnchorPane>
