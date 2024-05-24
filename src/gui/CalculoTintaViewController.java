@@ -117,13 +117,13 @@ public class CalculoTintaViewController implements Initializable {
 		}
 		calcularPreco();
 		adicionarDadosTabela();
-		atuaizarValorTotal();
+		atualizarValorTotal();
 	}
 
 	/**
 	 * Atualiza o valor total com base nos dados da tabela.
 	 */
-	private void atuaizarValorTotal() {
+	private void atualizarValorTotal() {
 		double soma = 0;
 		for (MedidasValorModel valor : data) {
 			soma += valor.getValorTotal();
